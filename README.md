@@ -64,4 +64,3 @@ Este repositório é utilizado para armazenar e organizar exercícios práticos 
 
 ---
 
-✅ **Pronto para copiar e colar!** Cole isso no seu `README.md` e seu repositório ficará profissional! 🚀
