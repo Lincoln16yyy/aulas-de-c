@@ -20,12 +20,15 @@ aulas-de-c/
 - `aula.c` - Conceitos básicos de variáveis e operações
 
 ### 🎯 Atividades
-- `atividade_1.c` - Cálculo de área do retângulo
-- `atividade_2.c` - Cálculo de ferraduras de cavalo
-- `atividade_3.c` - Cálculo de pão, broas e poupança
+- `atividade_01.c` - Cálculo de área do retângulo
+- `atividade_02.c` - Cálculo de ferraduras de cavalo
+- `atividade_03.c` - Cálculo de pão, broas e poupança
+- `atividade_04.c` - Exercícios de atividades
 
 ### 🚀 Exercícios
-- `exercicios_parte_4.c` - Exercícios de cálculos matemáticos (soma, produto, raiz quadrada, seno, módulo)
+- `exercicio_07.c` a `exercicio_22.c` - Exercícios práticos variados
+- `exercicios_parte_5.c`, `exercicios_parte_6.c` - Listas de exercícios
+- `exercicios_extras.c` - Exercícios adicionais
 
 ## 🔧 Como Compilar e Executar
 
