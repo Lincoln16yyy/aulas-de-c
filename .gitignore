@@ -1,0 +1,19 @@
+# Binários e arquivos compilados
+*.exe
+*.o
+*.out
+a.out
+
+# Arquivos temporários
+*.swp
+*~
+.DS_Store
+
+# Binários gerados pelo GCC (sem extensão)
+# Como a maioria dos fontes são .c, podemos ignorar os executáveis correspondentes
+atividades/atividade_01
+atividades/atividade_02
+atividades/atividade_03
+atividades/atividade_04
+exercicios/exercicio_*
+!exercicios/exercicio_*.c

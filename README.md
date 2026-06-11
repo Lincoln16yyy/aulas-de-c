@@ -26,7 +26,7 @@ aulas-de-c/
 - `atividade_04.c` - Exercícios de atividades
 
 ### 🚀 Exercícios
-- `exercicio_07.c` a `exercicio_22.c` - Exercícios práticos variados
+- `exercicio_07.c` a `exercicio_24.c` - Exercícios práticos variados
 - `exercicios_parte_5.c`, `exercicios_parte_6.c` - Listas de exercícios
 - `exercicios_extras.c` - Exercícios adicionais
 
