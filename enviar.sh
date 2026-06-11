@@ -65,9 +65,17 @@ git add .
 
 # Verifica se há algo para commitar
 if ! git diff-index --quiet HEAD --; then
-    git commit -m "Update via celular: $(date +'%d/%m/%Y %H:%M')"
-    git push origin main
-    echo -e "${GREEN}✓ Tudo pronto! Repositório atualizado e arquivos organizados.${NC}"
+git commit -m "Update via celular: $(date +'%d/%m/%Y %H:%M')"
+git push origin main
+echo -e "${GREEN}✓ Tudo pronto! Repositório atualizado e arquivos organizados.${NC}"
 else
-    echo "Nada de novo para enviar no momento."
+echo "Nada de novo para enviar no momento."
 fi
+
+# 4. Sincronizar com a pasta visível no Gerenciador de Arquivos
+echo -e "${BLUE}==> Sincronizando com a pasta de Documentos do celular...${NC}"
+cp -r "$REPO_DIR/exercicios" "/sdcard/Documents/aulas-de-c-backup/"
+cp -r "$REPO_DIR/atividades" "/sdcard/Documents/aulas-de-c-backup/"
+cp "$REPO_DIR/README.md" "/sdcard/Documents/aulas-de-c-backup/"
+echo -e "${GREEN}✓ Cópia atualizada em: Documentos/aulas-de-c-backup${NC}"
+
