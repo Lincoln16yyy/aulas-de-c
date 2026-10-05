@@ -122,13 +122,48 @@ gcc arquivo.c -o arquivo -lm
 
 ## 📱 Enviando do celular
 
-O `enviar.sh` organiza os `.c` baixados para `CodingC` no armazenamento
-interno, classifica pelo nome, sincroniza com o GitHub e faz backup em
-`Documents/aulas-de-c-backup`.
+O `enviar` organiza os `.c` baixados para `/sdcard/Download/CodingC`, sincroniza
+com o GitHub e faz backup em `Documents/aulas-de-c-backup`.
 
 ```bash
-bash enviar.sh
+enviar            # organiza, commita e envia
+enviar --dry-run  # só mostra o que faria, sem mover nem enviar
 ```
+
+### Como os arquivos são classificados
+
+| Nome do arquivo | Para onde vai |
+| --- | --- |
+| `exercicio_07.c` | `exercicios/01-condicionais/`, conforme o número da lista |
+| `exercicio_40.c` (número novo) | o script pergunta a pasta, já sugerindo uma pelo código |
+| `aula_03.c` | `aulas/aula_03.c` |
+| `atividade_02.c` | `atividades/atividade_02.c` |
+| `20261005-141532.c` (nome do app) | o script pergunta — ver abaixo |
+| `matriz_lados.c` (nome escolhido por você) | `exercicios/08-extras/` |
+
+Quando o app salva com nome de data, o `enviar` lê o código, adivinha o tema e
+pergunta antes de mexer em qualquer coisa:
+
+```
+Arquivo sem nome padrão: 20261005-141532.c
+    Detectei pelo código: 07-structs-arquivos (structs, typedef e arquivos)
+    Pasta [07-structs-arquivos]:
+    Número do exercício [38]:
+    Vai ficar em: exercicios/07-structs-arquivos/exercicio_38.c
+```
+
+Um `Enter` em branco aceita a sugestão. O número é único no repositorio inteiro
+— se você digitar um número que já existe, o script diz onde está e pergunta de
+novo. Também arruma arquivos com nome de data que já tenham sobrado no repo.
+
+A detecção é heurística: a ordem dos testes é struct → matriz → string →
+função → vetor → loop → condicional, e o teste de vetor vem antes do de loop de
+proposito (quase todo exercício de vetor usa `for`). Acertou em 26 dos 35
+exercícios do repositório, e nas divergências ela costuma estar mais certa que a
+classificação anterior. De qualquer forma, é só uma sugestão — confirme sempre.
+
+Sem terminal disponível (cron, pipe, editor), não há prompt: os arquivos com
+nome de data vão direto para `08-extras/`, preservados como vieram.
 
 ## 🎓 Objetivo
 
